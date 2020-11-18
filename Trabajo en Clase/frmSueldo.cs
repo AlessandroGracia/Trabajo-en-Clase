@@ -12,6 +12,7 @@ namespace Trabajo_en_Clase
 {
     public partial class frmSueldo : Form
     {
+       
         public frmSueldo()
         {
             InitializeComponent();
@@ -93,13 +94,90 @@ namespace Trabajo_en_Clase
             Double LiquidoRecibir= totIng - totEg ;
             lblResultado.Text = "Estimado," + this.txtNombre.Text + ", tu sueldo es: " + LiquidoRecibir.ToString();
 
-
         
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close(); //cerrar el programa
+        }
+
+        private void txtHorasTrabajadas_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47)  || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Por favor ingresar solo numeros..", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+               
+            }
+        }
+
+        private void txtValorporHoras_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Por favor ingresar solo numeros..", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+
+            }
+        }
+
+        private void txtBonoderesponsabilidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Por favor ingresar solo numeros..", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+
+            }
+        }
+
+        private void txtAsoTrab_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Por favor ingresar solo numeros..", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+
+            }
+        }
+
+        private void txtBar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Por favor ingresar solo numeros..", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+
+            }
+        }
+
+        private void txtCuentaPagar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Por favor ingresar solo numeros..", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+
+            }
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+         
+                {
+                MessageBox.Show("Por favor ingresar solo Letras..", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+
+            }
         }
     }
 }
