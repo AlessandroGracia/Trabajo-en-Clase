@@ -36,6 +36,43 @@ namespace Trabajo_en_Clase
                 this.txtNombre.Focus();
                 return;
             }
+            if (this.txtHorasTrabajadas.Text.Length == 0)
+            {
+                MessageBox.Show("Por favor debes ingresar las Horas Trabajadas...");
+                this.txtHorasTrabajadas.Focus();
+                return;
+            }
+            if (this.txtValorporHoras.Text.Length == 0)
+            {
+                MessageBox.Show("Por favor debes ingresar el Valor por Hora...");
+                this.txtValorporHoras.Focus();
+                return;
+            }
+            if (this.txtBonoderesponsabilidad.Text.Length == 0)
+            {
+                MessageBox.Show("Por favor debes ingresar el Bono de responsabilidad...");
+                this.txtBonoderesponsabilidad.Focus();
+                return;
+            }
+            if (this.txtAsoTrab.Text.Length == 0)
+            {
+                MessageBox.Show("Por favor debes ingresar el Aso del Trabajador...");
+                this.txtAsoTrab.Focus();
+                return;
+            }
+            if (this.txtBar.Text.Length == 0)
+            {
+                MessageBox.Show("Por favor debes ingresar el Bar...");
+                this.txtBar.Focus();
+                return;
+            }
+            if (this.txtCuentaPagar.Text.Length == 0)
+            {
+                MessageBox.Show("Por favor debes ingresar Las Cuentas a Pagar...");
+                this.txtCuentaPagar.Focus();
+                return;
+            }
+            
             //1.Validar el ingreso de todos los cuadros de texto
             //2.Validar que el dato ingresado sea numerico
             //no usar try..catch
